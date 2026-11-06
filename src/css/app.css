@@ -39,37 +39,65 @@ body {
   color: var(--app-muted);
 }
 
+/* Сітка для трьох карток статистики */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
 .summary-card {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 24px;
-  border-radius: 18px;
+  justify-content: center;
+  padding: 20px 12px;
+  border-radius: 16px;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  text-align: center;
+}
+
+.summary-card--primary {
   background: var(--app-primary);
+  color: #ffffff;
+  border: none;
+}
+
+.summary-card--primary .summary-value,
+.summary-card--primary .summary-label {
   color: #ffffff;
 }
 
 .summary-label {
-  font-size: 13px;
-  opacity: 0.85;
+  font-size: 12px;
+  color: var(--app-muted);
+  margin-top: 4px;
 }
 
 .summary-value {
-  margin-top: 8px;
-  font-size: 34px;
+  margin-top: 4px;
+  font-size: 26px;
   font-weight: bold;
+  color: var(--app-text);
 }
 
-.summary-icon {
+.stat-icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  font-size: 26px;
+  margin-bottom: 8px;
+  font-size: 22px;
+  color: #ffffff;
 }
+
+.bg-blue { background-color: #2563eb; }
+.bg-green { background-color: #16a34a; }
+.bg-orange { background-color: #d97706; }
 
 .section-header {
   display: flex;
